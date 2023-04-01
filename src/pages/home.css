@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.home {
+  margin: 0 auto;
+  width: 1280px;
+}
+.wrapper-sort-catalog {
+  display: flex;
+}
+
+@media (max-width: 990px) {
+  .home {
+    margin: 0 auto;
+    width: 990px;
+  }
+}

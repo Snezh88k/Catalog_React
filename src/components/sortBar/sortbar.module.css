@@ -1,0 +1,121 @@
+.sortLeftBar {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper_filter_param {
+  position: relative;
+  width: 238px;
+  left: 1px;
+  top: 10px;
+}
+
+h3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #111111;
+}
+
+.price_input {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.price_input input {
+  width: 100px;
+  height: 23px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 14px;
+  gap: 10px;
+
+  background: #ffc650;
+  border-radius: 1000px;
+}
+
+.categories_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  padding: 15px;
+  width: 238px;
+  height: 300px;
+}
+
+.inactive {
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+
+  box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.04);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.active {
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(173, 173, 173);
+
+  box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.04);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.search {
+  box-sizing: border-box;
+  display: flex;
+  width: 235px;
+  height: 59px;
+  border-radius: 36px;
+  background: #ededed;
+  padding-right: 13px;
+}
+
+.search img {
+  width: 39px;
+}
+
+.search input {
+  box-sizing: border-box;
+  width: 186px;
+  height: 59px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 10px 13px 20px;
+  gap: 10px;
+  border: none;
+
+  background: #ededed;
+  border-radius: 36px;
+  outline: none;
+}
+
+.invisible {
+  display: none;
+}
+
+.checkbox_wrapper {
+  width: 10px;
+  height: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  /* justify-content: start; */
+}

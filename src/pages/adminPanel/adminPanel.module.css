@@ -1,0 +1,21 @@
+.adminPanel {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 15px;
+}
+
+.wrapperProduct {
+  border: 1px solid rgb(85, 85, 81);
+  width: 600px;
+  margin: 15px;
+}
+
+.container {
+  display: flex;
+}

@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+.wrapper h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #111111;
+  margin-bottom: 50px;
+}
+
+.wrapper {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.path {
+  margin-top: 43px;
+}
+.path span {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 120%;
+  color: #3f4e65;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-right: 1px dashed rgb(63, 78, 101, 0.3);
+}
+
+.path span:nth-child(1) {
+  padding-left: 0;
+}
+
+.path span:last-child {
+  color: rgb(63, 78, 101, 0.5);
+  border: none;
+}
+
+.orderWrapper {
+  border-top: 1px dashed rgb(63, 78, 101, 0.3);
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttonOrder {
+  width: 192px;
+  height: 59px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 19px;
+  gap: 12px;
+  background: #ffc85e;
+  border-radius: 79px;
+  border: none;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
+.orderWrapper span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 130%;
+  color: #111111;
+}

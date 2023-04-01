@@ -1,0 +1,84 @@
+.wrapper {
+  height: 291px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px dashed rgb(63, 78, 101, 0.3);
+  padding: 50px 0;
+}
+
+.productImg {
+  height: 191px;
+}
+
+.byeBlock {
+  display: flex;
+  justify-content: space-between;
+  width: 113px;
+  height: 23px;
+  margin-left: 40px;
+}
+
+.byeBlock button {
+  padding: 4px 14px;
+  gap: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 198, 80, 0.3) 0%,
+    rgba(254, 202, 110, 0.3) 97.25%
+  );
+  border-radius: 1000px;
+  border: none;
+}
+
+.buttonDelete {
+  width: 59px;
+  height: 59px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 19px;
+  gap: 12px;
+  background: #ffc85e;
+  border-radius: 79px;
+  border: none;
+}
+
+.description span {
+  margin-top: 9px;
+  display: block;
+  width: 480px;
+  height: 72px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #111111;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description img {
+  margin-right: 8px;
+}
+
+.description div {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  color: #3f4e65;
+}
+
+.price {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 130%;
+  color: #111111;
+}
