@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Catalog_React/static/css/main.96f28611.css",
-    "main.js": "/Catalog_React/static/js/main.ef05d6bd.js",
+    "main.js": "/Catalog_React/static/js/main.81f417f6.js",
     "static/media/logo.svg": "/Catalog_React/static/media/logo.04378217b2efe735d0f95f89136a761f.svg",
     "static/media/icons_cart.svg": "/Catalog_React/static/media/icons_cart.38d6d6b8821988191585d29c7f410a8d.svg",
     "static/media/icons_basket.svg": "/Catalog_React/static/media/icons_basket.a5d100d0100f4885c179d9d923ea75eb.svg",
@@ -17,10 +17,10 @@
     "static/media/icons_download.svg": "/Catalog_React/static/media/icons_download.328b8a0054f394fba0bd4e0a04124692.svg",
     "static/media/icons_price.svg": "/Catalog_React/static/media/icons_price.5e96ff0389bda2c469106116f0a58afd.svg",
     "main.96f28611.css.map": "/Catalog_React/static/css/main.96f28611.css.map",
-    "main.ef05d6bd.js.map": "/Catalog_React/static/js/main.ef05d6bd.js.map"
+    "main.81f417f6.js.map": "/Catalog_React/static/js/main.81f417f6.js.map"
   },
   "entrypoints": [
     "static/css/main.96f28611.css",
-    "static/js/main.ef05d6bd.js"
+    "static/js/main.81f417f6.js"
   ]
 }
