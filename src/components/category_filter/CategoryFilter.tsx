@@ -4,10 +4,10 @@ import { useSearchParams } from "react-router-dom";
 import styles from "./categoryFilter.module.css";
 
 interface Props {
-  className?: string;
+  claz?: string;
 }
 
-export default function CategoryFilter({ className }: Props) {
+export default function CategoryFilter({ claz }: Props) {
   const nameCategories = ["Уход за телом", "Уход за руками", "Уход за ногами"];
 
   const categories = ["for body", "for hands", "for legs"];
@@ -37,7 +37,9 @@ export default function CategoryFilter({ className }: Props) {
   };
 
   return (
-    <div className={[styles.wrapper, className].filter(Boolean).join(" ")}>
+    <div
+      className={claz ? ` ${styles.wrapper} ${styles[claz]}` : styles.wrapper}
+    >
       {nameCategories.map((category, index) => {
         return (
           <div

@@ -1,6 +1,6 @@
-import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { clearItems } from "../../redux/slices/cartSlice";
+import { useState } from "react";
 
 import ProductInCart from "../../components/productInCart/ProductInCart";
 import styles from "./cart.module.css";
@@ -28,13 +28,30 @@ interface State {
 export default function Cart() {
   const { items, totalPrice } = useSelector((state: State) => state.cart);
   const dispatch = useDispatch();
+  const [isVisible, setIsVisible] = useState(false);
 
   const onClickOrder = () => {
-    dispatch(clearItems());
+    if (items.length === 0) {
+      return;
+    } else {
+      dispatch(clearItems());
+      setIsVisible(!isVisible);
+    }
   };
 
   return (
     <div className={styles.wrapper}>
+      {isVisible ? (
+        <div
+          onClick={() => setIsVisible(false)}
+          className={styles.modalWindowWrapper}
+        >
+          <div className={styles.modalWindow}>Спасибо за заказ!</div>
+        </div>
+      ) : (
+        ""
+      )}
+
       <div className={styles.path}>
         <span>Главная</span>
         <span>Корзина</span>

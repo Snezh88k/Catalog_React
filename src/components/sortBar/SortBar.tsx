@@ -6,6 +6,9 @@ import styles from "./sortbar.module.css";
 import iconsSearch from "../../img/icons_search.svg";
 import CategoryFilter from "../category_filter/CategoryFilter";
 
+import polygon from "../../img/Polygon.svg";
+import deleteIcon from "../../img/icons_delete.svg";
+
 export default function SortBar() {
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -45,8 +48,8 @@ export default function SortBar() {
     <div className={styles.sortLeftBar}>
       <div className={styles.wrapper_filter_param}>
         <h3>ПОДБОР ПО ПАРАМЕТРАМ</h3>
-        <div className={styles.price}>
-          <span>
+        <div className={styles.priceWrapper}>
+          <span className={styles.price}>
             Цена <b>₸</b>
           </span>
           <div>
@@ -115,16 +118,25 @@ export default function SortBar() {
                         );
                       })}
                     </div>
-                    <span onClick={isVisibleList}>Показать все</span>
-                    <button type="submit">Submit</button>
-                    <button
-                      type="reset"
-                      onClick={() => {
-                        setSearchParams({});
-                      }}
-                    >
-                      Reset This
-                    </button>
+                    <span className={styles.viewAll} onClick={isVisibleList}>
+                      Показать все
+                      <img src={polygon} alt="" />
+                    </span>
+                    <div className={styles.buttonWrapper}>
+                      {" "}
+                      <button type="submit" className={styles.buttonSubmit}>
+                        Показать
+                      </button>
+                      <button
+                        type="reset"
+                        onClick={() => {
+                          setSearchParams({});
+                        }}
+                        className={styles.buttonDelete}
+                      >
+                        <img src={deleteIcon} alt="del" />
+                      </button>
+                    </div>
                   </Form>
                 );
               }}
@@ -132,7 +144,7 @@ export default function SortBar() {
           </div>
         </div>
       </div>
-      <CategoryFilter />
+      <CategoryFilter claz={`sortBarColumn`} />
     </div>
   );
 }

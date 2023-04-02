@@ -34,9 +34,14 @@ h3 {
   align-items: center;
   padding: 4px 14px;
   gap: 10px;
-
-  background: #ffc650;
+  border: none;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 198, 80, 0.3) 0%,
+    rgba(254, 202, 110, 0.3) 97.25%
+  );
   border-radius: 1000px;
+  margin-bottom: 30px;
 }
 
 .categories_wrapper {
@@ -84,6 +89,7 @@ h3 {
   border-radius: 36px;
   background: #ededed;
   padding-right: 13px;
+  margin-bottom: 15px;
 }
 
 .search img {
@@ -118,4 +124,107 @@ h3 {
   display: flex;
   align-items: center;
   /* justify-content: start; */
+}
+
+.price {
+  display: block;
+  margin-top: 10px;
+}
+
+.priceWrapper h4 {
+  margin-bottom: 15px;
+}
+
+.checkbox_wrapper {
+  margin-bottom: 15px;
+}
+.checkbox_wrapper label {
+  margin-left: 10px;
+}
+
+.viewAll {
+  display: flex;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  color: #3f4e65;
+}
+
+.viewAll img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+.buttonSubmit {
+  width: 169px;
+  height: 59px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 19px;
+  gap: 12px;
+
+  background: #ffc85e;
+  border-radius: 79px;
+  border: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #ffffff;
+}
+
+.buttonDelete {
+  height: 59px;
+  width: 59px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 19px;
+  gap: 12px;
+  background: #ffc85e;
+  border-radius: 79px;
+  border: none;
+}
+
+@media (max-width: 780px) {
+  .sortLeftBar {
+    width: 100%;
+  }
+
+  .wrapper_filter_param {
+    padding: 15px;
+    width: 100%;
+  }
+  .price_input {
+    width: 232px;
+  }
+
+  .buttonSubmit {
+    width: 216px;
+  }
+
+  .buttonWrapper {
+    width: 288px;
+  }
+  .search {
+    width: 288px;
+  }
+  .search input {
+    width: 240px;
+  }
 }

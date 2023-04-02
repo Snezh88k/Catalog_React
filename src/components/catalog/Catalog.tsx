@@ -126,7 +126,7 @@ const Catalog: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className={styles.catalog}>
       {isLoading ? (
         [...new Array(5)].map((_, index) => <Skeleton key={index} />)
       ) : (

@@ -22,11 +22,13 @@ export default function PaginatedItems({ itemsPerPage, items, Items }) {
       <Items currentItems={currentItems} />
       <ReactPaginate
         breakLabel="..."
-        nextLabel=""
+        nextLabel=" "
+        nextLinkClassName={styles.prev}
+        previousLinkClassName={styles.next}
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={pageCount}
-        previousLabel=""
+        previousLabel=" "
         renderOnZeroPageCount={null}
         activeClassName={styles.active_page}
         className={styles.pagination}

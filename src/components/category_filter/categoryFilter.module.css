@@ -16,8 +16,10 @@
   height: 70px;
   padding: 10px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  background: #ededed;
+  background: #ffffff;
+  /* 1 */
 
   box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.04);
   border-radius: 10px;
@@ -28,6 +30,7 @@
   height: 70px;
   padding: 10px;
   display: flex;
+  justify-content: center;
   align-items: center;
   background: #cccccc;
 
@@ -36,12 +39,35 @@
   cursor: pointer;
 }
 
+.sortBarColumn {
+  display: flex;
+  flex-direction: column;
+}
 @media (max-width: 990px) {
+  .wrapper {
+    width: 100%;
+  }
   .inactive {
     height: 35px;
   }
 
   .active {
     height: 35px;
+  }
+}
+
+@media (max-width: 990px) {
+  .wrapper {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+  .inactive {
+    height: 35px;
+    justify-content: start;
+  }
+
+  .active {
+    height: 35px;
+    justify-content: start;
   }
 }

@@ -376,3 +376,191 @@ header input {
     margin-left: 10px;
   }
 }
+
+@media (max-width: 780px) {
+  .bottomLine {
+    display: flex;
+    border-bottom: 1px solid rgb(63, 78, 101, 0.1);
+    height: 40px;
+    border-top: 1px solid rgb(63, 78, 101, 0.1);
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #3f4e65;
+  }
+
+  .topLine {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+
+  .topLine button {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+
+    background: #ffc85e;
+    border-radius: 1000px;
+    border: none;
+  }
+
+  .topLine button span {
+    position: absolute;
+    width: 8.4px;
+    height: 1px;
+    background-color: white;
+    top: 16px;
+    left: 12px;
+    transition: 1s all linear;
+  }
+
+  .topLine button span:nth-child(1) {
+    transform: translateY(3px);
+  }
+  .topLine button span:nth-child(3) {
+    transform: translateY(-3px);
+  }
+
+  .logo {
+    width: 97px;
+    height: 41px;
+  }
+  .card {
+    position: relative;
+    width: auto;
+  }
+
+  #card-img {
+    height: 25px;
+    width: 25px;
+  }
+  .card span {
+    font-size: 10px;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    top: -4px;
+    left: 14px;
+  }
+
+  .bottomLine div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50%;
+  }
+  .bottomLine div:nth-child(1) {
+    border-right: 1px dashed rgb(63, 78, 101, 0.1);
+  }
+  .bottomLine div span {
+    margin-left: 6px;
+  }
+
+  .burger-menu {
+    position: absolute;
+    overflow-y: auto;
+    top: 105px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: white;
+    padding: 0 13px 0 13px;
+  }
+  .order-call {
+    display: flex;
+  }
+
+  .order-call div {
+    align-items: start;
+    margin-left: 16px;
+  }
+
+  .order-call img {
+    display: block;
+    width: 18px;
+    height: 18px;
+  }
+
+  .order-call div span:nth-child(3) {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 150%;
+    text-decoration-line: none;
+    color: #3f4e65;
+  }
+  .order-call_mob {
+    display: flex;
+    align-items: center;
+  }
+  .order-call_mob span:nth-child(1) {
+    width: 30px;
+    height: 30px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    background: #ffc85e;
+    border-radius: 50%;
+  }
+
+  .order-call_mob span:nth-child(2) {
+    margin-left: 7px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    text-decoration-line: underline;
+
+    color: #3f4e65;
+  }
+
+  .contact-info_wrapper {
+    height: 243px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom: 1px dashed rgb(63, 78, 101, 0.2);
+  }
+
+  .menu_wrapper {
+    height: 348px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .button-price {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 290px;
+    height: 70px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .topLine .closeSpan span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+  }
+  .topLine .closeSpan span:nth-child(2) {
+    opacity: 0;
+  }
+  .topLine .closeSpan span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+  }
+}

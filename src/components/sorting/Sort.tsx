@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import Media from "react-media";
 
 import CategoryFilter from "../category_filter/CategoryFilter";
 import styles from "./sort.module.css";
@@ -70,8 +71,7 @@ const Sort = () => {
           </span>
         </div>
       </div>
-
-      <CategoryFilter />
+      <Media query="(min-width: 781px)" render={() => <CategoryFilter />} />
     </div>
   );
 };

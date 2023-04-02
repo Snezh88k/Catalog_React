@@ -82,3 +82,47 @@
   line-height: 130%;
   color: #111111;
 }
+
+.byeWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+}
+
+@media (max-width: 770px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 460px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .description span {
+    margin-top: 9px;
+    display: block;
+    width: 100%;
+    height: 72px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #111111;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .byeWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    height: 59px;
+  }
+  .byeBlock {
+    margin-left: 0;
+  }
+}

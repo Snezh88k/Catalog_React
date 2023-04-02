@@ -67,18 +67,19 @@ export default function ProductInCart({ item }: Props) {
           {item.brend} {item.name}
         </span>
       </div>
+      <div className={styles.byeWrapper}>
+        <div className={styles.byeBlock}>
+          <button onClick={onClickMinus}>-</button>
+          <span>{count}</span>
+          <button onClick={onClickAdd}>+</button>
+        </div>
 
-      <div className={styles.byeBlock}>
-        <button onClick={onClickMinus}>-</button>
-        <span>{count}</span>
-        <button onClick={onClickAdd}>+</button>
+        <div className={styles.price}>{item.price * item.count} ₸</div>
+
+        <button className={styles.buttonDelete} onClick={onClickRemove}>
+          <img src={iconDelete} alt="del" />
+        </button>
       </div>
-
-      <div className={styles.price}>{item.price * item.count} ₸</div>
-
-      <button className={styles.buttonDelete} onClick={onClickRemove}>
-        <img src={iconDelete} alt="del" />
-      </button>
     </div>
   );
 }

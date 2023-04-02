@@ -10,38 +10,48 @@ import { Product } from "./components/product/Product";
 import { productLoader } from "./components/product/productLoader";
 import { store } from "./redux/store";
 import { Provider } from "react-redux";
+import { basename } from "path";
 
-let router = createBrowserRouter([
-  {
-    path: "/",
-    Component: App,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/",
-        Component: Home,
-      },
-      {
-        path: "cart",
-        Component: Cart,
-      },
-      {
-        path: "product/:id",
-        loader: productLoader,
-        Component: Product,
-      },
-      {
-        path: "admin",
-        Component: AdminPanel,
-      },
-    ],
-  },
-]);
-
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
+let router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "cart",
+          element: <Cart />,
+        },
+        {
+          path: "product/:id",
+          loader: productLoader,
+          element: <Product />,
+        },
+        {
+          path: "admin",
+          element: <AdminPanel />,
+        },
+      ],
+    },
+  ],
+  { basename: "/Catalog_React" }
 );
-root.render(
+
+// const root = ReactDOM.createRoot(
+//   document.getElementById("root") as HTMLElement
+// );
+// root.render(
+//   <Provider store={store}>
+//     <RouterProvider router={router} />
+//   </Provider>
+// );
+
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <Provider store={store}>
     <RouterProvider router={router} />
   </Provider>
