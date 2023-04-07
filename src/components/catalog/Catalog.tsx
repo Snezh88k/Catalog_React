@@ -6,113 +6,37 @@ import Skeleton from "./Skeleton";
 import styles from "./catalog.module.css";
 
 import ProductCard from "../productCardInCatalog/ProductCard";
-
-interface Filter {
-  startPrice: string;
-  endPrice: string;
-  checked: string[];
-  search: string;
-  sort: string;
-  sortOrder: string;
-}
-
-interface Item {
-  id: string;
-  imageUrl: string;
-  name: string;
-  typeSize: string;
-  size: string;
-  barcode: string;
-  maker: string;
-  brend: string;
-  description: string;
-  price: number;
-  scopeOfApplication: string[];
-}
+import { Item } from "./lib/types";
+import { parseFilterSearchParams } from "./lib/parseFilterSearchParams";
+import { productFiltering } from "./lib/productFiltering";
+import { createFilterUrl } from "./lib/createFilterSearchParams";
 
 const Catalog: React.FC = () => {
   const [searchParams] = useSearchParams({
     sortBy: "name",
     order: "asc",
   });
+
   const [items, setItems] = useState<Item[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const filter = useMemo<Filter>(
-    () => ({
-      startPrice: searchParams.get("startPrice") || "",
-      endPrice: searchParams.get("endPrice") || "",
-      checked: searchParams.getAll("checked"),
-      search: searchParams.get("search") || "",
-      sort: searchParams.get("sortBy") || "",
-      sortOrder: searchParams.get("order") || "",
-    }),
+  const filter = useMemo(
+    () => parseFilterSearchParams(searchParams),
     [searchParams]
   );
 
   useEffect(() => {
-    setIsLoading(true);
-
-    const url = new URL("https://641b23c71f5d999a445c652b.mockapi.io/products");
-    url.searchParams.append("sortBy", filter.sort);
-    url.searchParams.append("order", filter.sortOrder || "asc");
-    if (filter.search) {
-      url.searchParams.append("search", filter.search);
-    }
+    const url = createFilterUrl(
+      filter,
+      "https://641b23c71f5d999a445c652b.mockapi.io/products"
+    );
 
     fetch(url)
-      .then((response) => response.json())
+      .then((response) => response.json() as unknown as Item[])
       .then((items) => {
         setIsLoading(false);
 
-        console.log(items, "items");
-
-        const filterItems = (
-          items: Item[],
-          makerArr: string[],
-          startPrice = 0,
-          endPrice = 10000
-        ) => {
-          if (isNaN(endPrice)) {
-            endPrice = 10000;
-          }
-          if (isNaN(startPrice)) {
-            startPrice = 0;
-          }
-
-          const itemsFiltered = items.filter((product) => {
-            return (
-              product.price <= endPrice &&
-              product.price >= startPrice &&
-              (makerArr?.length ? makerArr.includes(product.maker) : true)
-            );
-          });
-          return itemsFiltered;
-        };
-
-        if (isNaN(parseFloat(filter.endPrice))) {
-          setItems(
-            filterItems(
-              items,
-              filter.checked,
-              parseFloat(filter.startPrice),
-              10000
-            )
-          );
-        } else if (isNaN(parseFloat(filter.startPrice))) {
-          setItems(
-            filterItems(items, filter.checked, 0, parseFloat(filter.endPrice))
-          );
-        } else {
-          setItems(
-            filterItems(
-              items,
-              filter.checked,
-              parseFloat(filter.startPrice),
-              parseFloat(filter.endPrice)
-            )
-          );
-        }
+        setItems(productFiltering(items, filter));
       });
   }, [filter]);
 

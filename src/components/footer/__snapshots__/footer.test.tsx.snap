@@ -1,0 +1,362 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should create Footer 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="footer"
+      >
+        <div
+          class="container"
+        >
+          <div
+            class="logoWrapper"
+          >
+            <img
+              alt="logo"
+              src="logoFooter.svg"
+            />
+             
+            <div
+              class="buttonPrice"
+            >
+              <span>
+                Прайс-лист
+              </span>
+              <img
+                alt="price list"
+                src="icons_price.svg"
+              />
+            </div>
+          </div>
+          <p>
+            Компания «Султан» — снабжаем розничные магазины товарами "под ключ" в Кокчетаве и Акмолинской области
+          </p>
+          <span
+            class="subscribe"
+          >
+            Подпишись на скидки и акции
+          </span>
+          <div
+            class="inputWrapper"
+          >
+            <input
+              placeholder="Введите ваш E-mail"
+              type="text"
+            />
+            <span>
+              <img
+                alt="icons search"
+                src="Vector.svg"
+              />
+            </span>
+          </div>
+          <div
+            class="infoWrapper"
+          >
+            <div
+              class="secondColumn"
+            >
+              <h2>
+                Меню сайта:
+              </h2>
+              <span>
+                О компании
+              </span>
+              <span>
+                Доставка и оплата
+              </span>
+              <span>
+                Возврат
+              </span>
+              <span>
+                Контакты
+              </span>
+            </div>
+            <div
+              class="thirdColumn"
+            >
+              <h2>
+                Категории:
+              </h2>
+              <span>
+                Бытовая химия
+              </span>
+              <span>
+                Косметика и гигиена
+              </span>
+              <span>
+                Товары для дома
+              </span>
+              <span>
+                Товары для детей и мам
+              </span>
+              <span>
+                Посуда
+              </span>
+            </div>
+            <div
+              class="lastColumn"
+            >
+              <h2>
+                Контакты
+              </h2>
+              <span
+                class="tel"
+              >
+                +7 (777) 490-00-91
+              </span>
+              <span
+                class="timeWork"
+              >
+                время работы: 9:00-20:00
+              </span>
+              <span>
+                Заказать звонок
+              </span>
+              <span>
+                opt.sultan@mail.ru
+              </span>
+              <span>
+                На связи в любое время
+              </span>
+              <div>
+                <img
+                  alt="visa"
+                  src="Visa.png"
+                />
+                <img
+                  alt="master"
+                  src="master.png"
+                />
+              </div>
+            </div>
+            <div
+              class="conectWrapper"
+            >
+              <span>
+                Связь в мессендежрах:
+              </span>
+              <div>
+                 
+                <img
+                  alt="telegram"
+                  src="telegram.png"
+                />
+                <img
+                  alt="whats"
+                  src="whats.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="footer"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="logoWrapper"
+        >
+          <img
+            alt="logo"
+            src="logoFooter.svg"
+          />
+           
+          <div
+            class="buttonPrice"
+          >
+            <span>
+              Прайс-лист
+            </span>
+            <img
+              alt="price list"
+              src="icons_price.svg"
+            />
+          </div>
+        </div>
+        <p>
+          Компания «Султан» — снабжаем розничные магазины товарами "под ключ" в Кокчетаве и Акмолинской области
+        </p>
+        <span
+          class="subscribe"
+        >
+          Подпишись на скидки и акции
+        </span>
+        <div
+          class="inputWrapper"
+        >
+          <input
+            placeholder="Введите ваш E-mail"
+            type="text"
+          />
+          <span>
+            <img
+              alt="icons search"
+              src="Vector.svg"
+            />
+          </span>
+        </div>
+        <div
+          class="infoWrapper"
+        >
+          <div
+            class="secondColumn"
+          >
+            <h2>
+              Меню сайта:
+            </h2>
+            <span>
+              О компании
+            </span>
+            <span>
+              Доставка и оплата
+            </span>
+            <span>
+              Возврат
+            </span>
+            <span>
+              Контакты
+            </span>
+          </div>
+          <div
+            class="thirdColumn"
+          >
+            <h2>
+              Категории:
+            </h2>
+            <span>
+              Бытовая химия
+            </span>
+            <span>
+              Косметика и гигиена
+            </span>
+            <span>
+              Товары для дома
+            </span>
+            <span>
+              Товары для детей и мам
+            </span>
+            <span>
+              Посуда
+            </span>
+          </div>
+          <div
+            class="lastColumn"
+          >
+            <h2>
+              Контакты
+            </h2>
+            <span
+              class="tel"
+            >
+              +7 (777) 490-00-91
+            </span>
+            <span
+              class="timeWork"
+            >
+              время работы: 9:00-20:00
+            </span>
+            <span>
+              Заказать звонок
+            </span>
+            <span>
+              opt.sultan@mail.ru
+            </span>
+            <span>
+              На связи в любое время
+            </span>
+            <div>
+              <img
+                alt="visa"
+                src="Visa.png"
+              />
+              <img
+                alt="master"
+                src="master.png"
+              />
+            </div>
+          </div>
+          <div
+            class="conectWrapper"
+          >
+            <span>
+              Связь в мессендежрах:
+            </span>
+            <div>
+               
+              <img
+                alt="telegram"
+                src="telegram.png"
+              />
+              <img
+                alt="whats"
+                src="whats.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

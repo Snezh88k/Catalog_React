@@ -1,5 +1,5 @@
 import Sort from "../components/sorting/Sort";
-import SortBar from "../components/sortBar/SortBar";
+import FilterSettings from "../components/filter_settings/FilterSettings";
 import Catalog from "../components/catalog/Catalog";
 import Media from "react-media";
 
@@ -14,7 +14,7 @@ export default function Home() {
           query="(max-width: 780px)"
           render={() => <h1 id="h1-home">КОСМЕТИКА И ГИГИЕНА</h1>}
         />
-        <SortBar />
+        <FilterSettings />
         <Media query="(max-width: 780px)" render={() => <Sort />} />
         <Catalog />
       </div>

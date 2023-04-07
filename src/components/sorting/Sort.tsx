@@ -22,7 +22,6 @@ const Sort = () => {
   const sortBy = searchParams.get("sortBy");
   const sortOrder = searchParams.get("order");
 
-  //Выбор критерия сортировки
   const setSortedFilter = (
     sortBy: SortBy,
     sortOrder: "asc" | "desc" = "asc"

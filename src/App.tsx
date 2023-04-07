@@ -4,7 +4,7 @@ import Footer from "./components/footer/Footer";
 
 function App() {
   return (
-    <div>
+    <div style={{ overflowX: "hidden" }}>
       <Header />
       <main>
         <Outlet />

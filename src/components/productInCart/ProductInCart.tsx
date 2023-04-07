@@ -27,7 +27,7 @@ export default function ProductInCart({ item }: Props) {
   const { id, name, price, imageUrl, count, size, typeSize, brend } = item;
   const dispatch = useDispatch();
 
-  const onClickAdd = () => {
+  const onClickAddQuantity = () => {
     const product = {
       id,
       name,
@@ -38,11 +38,11 @@ export default function ProductInCart({ item }: Props) {
       typeSize,
       brend,
     };
-    console.log(product, "В карзине ");
+
     dispatch(addItem(product));
   };
 
-  const onClickMinus = () => {
+  const onClickDownQuanity = () => {
     if (count === 1) {
       onClickRemove();
     } else {
@@ -69,9 +69,9 @@ export default function ProductInCart({ item }: Props) {
       </div>
       <div className={styles.byeWrapper}>
         <div className={styles.byeBlock}>
-          <button onClick={onClickMinus}>-</button>
+          <button onClick={onClickDownQuanity}>-</button>
           <span>{count}</span>
-          <button onClick={onClickAdd}>+</button>
+          <button onClick={onClickAddQuantity}>+</button>
         </div>
 
         <div className={styles.price}>{item.price * item.count} ₸</div>

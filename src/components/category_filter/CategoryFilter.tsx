@@ -4,10 +4,10 @@ import { useSearchParams } from "react-router-dom";
 import styles from "./categoryFilter.module.css";
 
 interface Props {
-  claz?: string;
+  addClass?: string;
 }
 
-export default function CategoryFilter({ claz }: Props) {
+export default function CategoryFilter({ addClass }: Props) {
   const nameCategories = ["Уход за телом", "Уход за руками", "Уход за ногами"];
 
   const categories = ["for body", "for hands", "for legs"];
@@ -23,7 +23,7 @@ export default function CategoryFilter({ claz }: Props) {
 
   useEffect(() => {
     setVisibleCategory(categories.indexOf(searchParams.get("search") || ""));
-  }, [categories, searchParams]);
+  }, [searchParams]);
 
   const onClickCategory = (indexCategory: number) => {
     searchParams.delete("search");
@@ -38,7 +38,9 @@ export default function CategoryFilter({ claz }: Props) {
 
   return (
     <div
-      className={claz ? ` ${styles.wrapper} ${styles[claz]}` : styles.wrapper}
+      className={
+        addClass ? ` ${styles.wrapper} ${styles[addClass]}` : styles.wrapper
+      }
     >
       {nameCategories.map((category, index) => {
         return (

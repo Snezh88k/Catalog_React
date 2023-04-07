@@ -6,7 +6,6 @@ export const productLoader = async ({ params }) => {
   )
     .then((response) => response.json())
     .then((item) => {
-      console.log("item", item);
       return item;
     });
 };

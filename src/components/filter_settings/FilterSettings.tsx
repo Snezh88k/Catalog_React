@@ -31,16 +31,18 @@ export default function SortBar() {
     setSearchSheet(message);
   };
 
-  const [visible, setVisible] = useState("none");
+  const [visibleCheckbox, setVisibleCheckbox] = useState("none");
   const isVisibleList = () => {
-    visible === "none" ? setVisible("") : setVisible("none");
+    visibleCheckbox === "none"
+      ? setVisibleCheckbox("")
+      : setVisibleCheckbox("none");
   };
 
   const initialValues = useMemo(() => {
     return {
       startPrice: searchParams.get("startPrice") || "",
       endPrice: searchParams.get("endPrice") || "",
-      checked: searchParams.getAll("checked"),
+      manufacturers: searchParams.getAll("manufacturers"),
     };
   }, [searchParams]);
 
@@ -97,7 +99,7 @@ export default function SortBar() {
                           <div className={styles.checkbox_wrapper} key={index}>
                             <Field
                               type="checkbox"
-                              name="checked"
+                              name="manufacturers"
                               value={item}
                             />
                             <label>{item}</label>
@@ -106,11 +108,11 @@ export default function SortBar() {
                           <div
                             className={styles.checkbox_wrapper}
                             key={index}
-                            style={{ display: visible }}
+                            style={{ display: visibleCheckbox }}
                           >
                             <Field
                               type="checkbox"
-                              name="checked"
+                              name="manufacturers"
                               value={item}
                             />
                             <label>{item}</label>
@@ -144,7 +146,7 @@ export default function SortBar() {
           </div>
         </div>
       </div>
-      <CategoryFilter claz={`sortBarColumn`} />
+      <CategoryFilter addClass={`sortBarColumn`} />
     </div>
   );
 }

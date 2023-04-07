@@ -112,9 +112,6 @@
 }
 
 @media (max-width: 770px) {
-  html {
-    overflow-x: hidden;
-  }
   .orderWrapper {
     display: flex;
     flex-direction: column;

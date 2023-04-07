@@ -42,11 +42,11 @@ export function Product() {
     dispatch(addItem(product));
   };
 
-  const onClickPlus = () => {
+  const onClickAddQuantity = () => {
     setCount(count + 1);
   };
 
-  const onClickMinus = () => {
+  const onClickDownQuanity = () => {
     count > 2 ? setCount(count - 1) : setCount(1);
   };
 
@@ -76,9 +76,9 @@ export function Product() {
           <div className={styles.bye_block}>
             <span className={styles.price}>{price} ₸</span>
             <div>
-              <button onClick={onClickMinus}>-</button>
+              <button onClick={onClickDownQuanity}>-</button>
               <span>{count}</span>
-              <button onClick={onClickPlus}>+</button>
+              <button onClick={onClickAddQuantity}>+</button>
             </div>
             <div onClick={onClickAdd}>
               <span>В корзину</span>

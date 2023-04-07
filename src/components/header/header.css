@@ -467,7 +467,7 @@ header input {
   }
 
   .burger-menu {
-    position: absolute;
+    position: fixed;
     overflow-y: auto;
     top: 105px;
     left: 0;
@@ -476,6 +476,7 @@ header input {
     z-index: 10;
     background-color: white;
     padding: 0 13px 0 13px;
+    z-index: 10;
   }
   .order-call {
     display: flex;
